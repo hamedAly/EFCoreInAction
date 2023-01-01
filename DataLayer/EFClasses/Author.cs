@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataLayer.EFClasses
+namespace DataLayer
 {
-    internal class Author
+    public class Author
     {
+        public int AuthorId { get; set; }
+        public string Name { get; set; }
+        public virtual ICollection<BookAuthor> BookAuthors { get; set; }
+
     }
 }

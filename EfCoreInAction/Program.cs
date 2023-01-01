@@ -1,5 +1,7 @@
+using DataLayer;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
-
+var connectinString = "";
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -7,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<EfDBContext>(options => options.UseSqlServer(connectinString));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

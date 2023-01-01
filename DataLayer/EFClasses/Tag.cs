@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataLayer.EFClasses
+namespace DataLayer
 {
-    internal class Tag
+    public class Tag
     {
+        public int TagId { get; set; }
+        public string   TagName { get; set; }
     }
 }
